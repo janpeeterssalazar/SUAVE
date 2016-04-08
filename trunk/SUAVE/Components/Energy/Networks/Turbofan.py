@@ -117,12 +117,12 @@ class Turbofan(Propulsor):
         combustor.inputs.stagnation_pressure                   = high_pressure_compressor.outputs.stagnation_pressure
         #combustor.inputs.nozzle_exit_stagnation_temperature = inlet_nozzle.outputs.stagnation_temperature
         
-        #flow through the high pressor comprresor
+        #flow through the high pressure compressor
         combustor(conditions)
         
         
 
-        #link the high pressure turbione to the combustor
+        #link the high pressure turbine to the combustor
         high_pressure_turbine.inputs.stagnation_temperature    = combustor.outputs.stagnation_temperature
         high_pressure_turbine.inputs.stagnation_pressure       = combustor.outputs.stagnation_pressure
         high_pressure_turbine.inputs.fuel_to_air_ratio         = combustor.outputs.fuel_to_air_ratio
